@@ -14,7 +14,7 @@ final class Conversation {
 	// | PRIVATE MEMBERS                                                                   |
 	// +-----------------------------------------------------------------------------------+
 
-	private Result $result;
+	private $result;
 
 	private function getAppInstructions(string $appId): ?string {
 		$appConfig = isset(app[$appId]) && is_array(app[$appId]) ? app[$appId] : null;

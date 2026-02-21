@@ -3,6 +3,9 @@
 # STRICT TYPES
 declare(strict_types=1);
 
+# ENVIRONMENT VARIABLES
+$env = parse_ini_file('/home/amicufkk/.env');
+
 # PHP REPORTING
 error_reporting(E_ERROR | E_PARSE);
 
@@ -34,7 +37,7 @@ define('mysql', [
 
 #OPENAI
 define('openai', [
-	'key' => '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',
+	'key' =>  $env['AMICO_OPENAI_API_KEY'] ?? null,
 	'model' => 'gpt-4o-mini',
 	'temperature' => 0.3,
 	'url' => 'https://api.openai.com/v1',

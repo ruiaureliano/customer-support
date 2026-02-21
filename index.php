@@ -12,7 +12,7 @@ header('Content-Type: application/json');
 
 $result = [
 	'status' => 200,
-	'success' => true,
+	'success' => true
 ];
 ksort($result);
 

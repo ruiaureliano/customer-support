@@ -90,7 +90,7 @@ final class Result {
 		return $this->encodeJsonResponse($result);
 	}
 
-	public function showSuccess(string $key, mixed $value): string {
+	public function showSuccess(string $key, $value): string {
 		http_response_code(200);
 		header('Content-Type: application/json');
 		$result = [
@@ -103,7 +103,7 @@ final class Result {
 		return $this->encodeJsonResponse($result);
 	}
 
-	public function showSuccessWithMetadata(string $key, mixed $value, mixed $metadata): string {
+	public function showSuccessWithMetadata(string $key, $value, $metadata): string {
 		http_response_code(200);
 		header('Content-Type: application/json');
 		$result = [
